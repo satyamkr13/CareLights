@@ -1,0 +1,406 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <LinearLayout
+        android:id="@+id/screenwhenon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="32dp">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/autoBrightnessOn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@android:color/transparent"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_brightness_auto_36dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/autoBrightnessOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@android:color/transparent"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_brightness_high_36dp" />
+            </FrameLayout>
+
+
+            <ImageButton
+                android:id="@+id/buttonwhenOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:text="LED OFF"
+                app:srcCompat="@drawable/ic_power_settings_36dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:id="@+id/settingsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/ic_settings_applications_36dp" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:max="255"
+                android:paddingBottom="24dp"
+                android:progress="220" />
+
+            <SeekBar
+                android:id="@+id/seekBarAmber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:max="255"
+                android:paddingBottom="24dp"
+                android:progressDrawable="@drawable/ambergradient"
+                android:thumb="@drawable/thumb_resource_file" />
+
+
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#006064"
+                android:onClick="showmatchbrightnessview"
+
+                >
+
+            <TextView
+                android:id="@+id/matchbrightnesstextview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:padding="24dp"
+                android:text="Reading Mode"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/white"
+                android:textSize="24dp" />
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_local_library_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#01579B"
+                android:layout_marginTop="8dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:text="Sweet Dreams"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/white"
+                    android:textSize="24dp" />
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_spa_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:background="#ffd600"
+                android:layout_marginTop="8dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:padding="24dp"
+                    android:text="Good Morning"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@android:color/black"
+                    android:textSize="24dp" />
+                <ImageView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_wb_sunny_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/screenwhenoff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="invisible">
+
+        <ImageButton
+            android:id="@+id/poweroffbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_power_on_white_24dp" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/connectionfailure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/connectionfailurecolor"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/errortitletextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:padding="16dp"
+            android:text="Couldn't find lights"
+            android:textColor="@android:color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/errortitletextview"
+            android:fontFamily="sans-serif-light"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Lights may be out of coverage area or switched off from power supply. You can click 'OTHER BULBS' to connect to another lights."
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="left"
+            android:layout_margin="16dp"
+            android:background="@android:color/white"
+            android:onClick="tryagain"
+            android:padding="8dp"
+            android:text="TRY AGAIN"
+            android:textAllCaps="true"
+            android:textColor="@color/connectionfailurecolor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:onClick="bulblist"
+            android:padding="8dp"
+            android:text="Other Lights"
+            android:textAllCaps="true"
+            android:textColor="@color/connectionfailurecolor"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connectingview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        android:visibility="invisible">
+
+        <ProgressBar
+            android:id="@+id/waiting"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:theme="@style/WhiteAccent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/waiting"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="sans-serif-light"
+            android:padding="8dp"
+            android:text="CONNECTING"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/radingmodeview"
+        android:background="#006064"
+        android:visibility="invisible">
+        <TextView
+            android:id="@+id/currentintesitydisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:layout_marginTop="16dp"
+            android:text="Incident Light : 0 lx"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/requiredintensity"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="40"
+            android:textColor="@android:color/white"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@id/requiredintensity"
+            android:layout_toStartOf="@id/requiredintensity"
+            android:background="@android:color/transparent"
+            android:onClick="subintensity"
+            android:text="+"
+            android:textSize="20dp"
+            app:srcCompat="@drawable/ic_remove_circle_outline_black_24dp" />
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="8dp"
+            android:layout_toEndOf="@id/requiredintensity"
+            android:layout_toRightOf="@id/requiredintensity"
+            android:background="@android:color/transparent"
+            android:onClick="addintensity"
+            android:text="-"
+            android:textSize="20dp"
+            app:srcCompat="@drawable/ic_add_circle_outline_white_36dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:onClick="showonnnviewfromview"
+            android:padding="8dp"
+            android:text="DONE"
+            android:textAllCaps="true"
+            android:textColor="#006064"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sweetdreamsview"
+        android:background="#01579B"
+        android:visibility="invisible"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Start Time"
+                android:textColor="@android:color/white"
+                android:layout_margin="16dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_margin="8dp"
+                android:id="@+id/nightlightstart"
+                android:layout_height="wrap_content"
+                android:text="8:00 PM"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
